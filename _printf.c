@@ -52,39 +52,40 @@ int _printf(const char *format, ...)
 
 int specifier_case(char c, va_list args)
 {
-        int count = 0;
+	int count = 0;
 
-        if (c == 'c')
+	if (c == 'c')
 		{
-                count = _putchar(va_arg(args, int));
+			count = _putchar(va_arg(args, int));
 		}
-        else if (c == '%')
+	else if (c == '%')
 		{
-                count = _putchar(c);
+			count = _putchar(c);
 		}
 		else if (c == 's')
-        {
-                char *str = va_arg(args, char *);
-
-                count += string_case(str);
-        }
-        else if (c == '\0')
 		{
-                count += _putchar(c);
+			char *str = va_arg(args, char *);
+
+			count += string_case(str);
+		}
+	else if (c == '\0')
+		{
+			count += _putchar(c);
 		}
 		else if (c == 'i' || c == 'd')
-        {
-                int num = va_arg(args, int);
-                if (num < 0)
-                        count++;
-                count += number_len(num);
-                number_case(num);
-        }
-        else
-        {
-                count += _putchar('%');
+		{
+			int num = va_arg(args, int);
+
+			if (num < 0)
+				count++;
+			count += number_len(num);
+			number_case(num);
+		}
+	else
+	{
+		count += _putchar('%');
 				count += _putchar(c);
-        }
-        va_end(args);
-        return (count);
+	}
+	va_end(args);
+	return (count);
 }
