@@ -11,3 +11,10 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+/**
+ * string_case - function count the number of char in string.
+ *
+ * @str: string
+ *
+ * Return: count of characters
+ */
