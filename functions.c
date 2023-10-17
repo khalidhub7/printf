@@ -55,22 +55,22 @@ int number_case(int numb)
 		_putchar('2');
 		number_case(14783648);
 		return (1);
-        }
-        else if (numb < 0)
-        {
-                _putchar('-');
-                numb = -numb;
-        }
-        if (numb < 10)
-        {
-                _putchar(numb + '0');
-        }
-        else if (numb >= 10)
-        {
-                number_case(numb / 10);
-                number_case(numb % 10);
-        }
-        return (1);
+	}
+	else if (numb < 0)
+	{
+		_putchar('-');
+		numb = -numb;
+	}
+	if (numb < 10)
+	{
+		_putchar(numb + '0');
+	}
+	else if (numb >= 10)
+	{
+		number_case(numb / 10);
+		number_case(numb % 10);
+	}
+	return (1);
 }
 
 /**
@@ -83,12 +83,12 @@ int number_case(int numb)
 
 int number_len(int number)
 {
-        if (number == 0)
-        {
-                return (0);
-        }
-        else
-        {
-                return (1 + number_len(number / 10));
-        }
+	if (number == 0)
+	{
+		return (0);
+	}
+	else
+	{
+		return (1 + number_len(number / 10));
+	}
 }
