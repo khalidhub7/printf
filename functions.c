@@ -22,18 +22,19 @@ int _putchar(char c)
 
 int string_case(char *str)
 {
-        int count = 0;
+	int count = 0;
 
-        if (str == NULL)
-        {
-                string_case("(null)");
-                count = count + 6;
-                return (count);
-        }
-        while (str[count])
-        {
-                _putchar(str[count]);
-                count++;
-        }
-        return (count);
+
+	if (str == NULL)
+	{
+		string_case("(null)");
+		count = count + 6;
+		return (count);
+	}
+	while (str[count])
+	{
+		_putchar(str[count]);
+		count++;
+	}
+	return (count);
 }
