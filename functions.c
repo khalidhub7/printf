@@ -11,6 +11,7 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
 /**
  * string_case - function count the number of char in string.
  *
@@ -18,3 +19,21 @@ int _putchar(char c)
  *
  * Return: count of characters
  */
+
+int string_case(char *str)
+{
+        int count = 0;
+
+        if (str == NULL)
+        {
+                string_case("(null)");
+                count = count + 6;
+                return (count);
+        }
+        while (str[count])
+        {
+                _putchar(str[count]);
+                count++;
+        }
+        return (count);
+}
