@@ -46,6 +46,7 @@ int string_case(char *str)
  *
  * Return: print the number
  */
+
 int number_case(int numb)
 {
 	if (numb == -214783648)
@@ -70,4 +71,24 @@ int number_case(int numb)
                 number_case(numb % 10);
         }
         return (1);
+}
+
+/**
+ * number_len - function print lenght of a number.
+ *
+ * @number: the number to print.
+ *
+ * Return: lenght of number.
+ */
+
+int number_len(int number)
+{
+        if (number == 0)
+        {
+                return (0);
+        }
+        else
+        {
+                return (1 + number_len(number / 10));
+        }
 }
