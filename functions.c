@@ -46,4 +46,28 @@ int string_case(char *str)
  *
  * Return: print the number
  */
-
+int number_case(int numb)
+{
+	if (numb == -214783648)
+	{
+		_putchar('-');
+		_putchar('2');
+		number_case(14783648);
+		return (1);
+        }
+        else if (numb < 0)
+        {
+                _putchar('-');
+                numb = -numb;
+        }
+        if (numb < 10)
+        {
+                _putchar(numb + '0');
+        }
+        else if (numb >= 10)
+        {
+                number_case(numb / 10);
+                number_case(numb % 10);
+        }
+        return (1);
+}
