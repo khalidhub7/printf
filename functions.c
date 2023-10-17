@@ -38,3 +38,12 @@ int string_case(char *str)
 	}
 	return (count);
 }
+
+/**
+ * number_case - function prints a number
+ *
+ * @numb: number
+ *
+ * Return: print the number
+ */
+
