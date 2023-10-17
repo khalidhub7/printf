@@ -54,7 +54,7 @@ int specifier_case(char c, va_list args)
 {
 	int count = 0;
 
-<<<<<<< HEAD
+
 	if (c == 'c')
 	{
 		count = _putchar(va_arg(args, int));
@@ -77,7 +77,7 @@ int specifier_case(char c, va_list args)
 	else if (c == 'i' || c == 'd')
 	{
 		int num = va_arg(args, int);
-		
+
 		if (num < 0)
 		{
 			count++;
