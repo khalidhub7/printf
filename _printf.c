@@ -54,11 +54,11 @@ int specifier_case(char c, va_list args)
 {
 	int count = 0;
 
-	if (c == 'c')
+		if (c == 'c')
 		{
 			count = _putchar(va_arg(args, int));
 		}
-	else if (c == '%')
+		else if (c == '%')
 		{
 			count = _putchar(c);
 		}
@@ -68,7 +68,7 @@ int specifier_case(char c, va_list args)
 
 			count += string_case(str);
 		}
-	else if (c == '\0')
+		else if (c == '\0')
 		{
 			count += _putchar(c);
 		}
