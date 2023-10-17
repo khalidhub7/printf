@@ -55,37 +55,40 @@ int specifier_case(char c, va_list args)
 	int count = 0;
 
 	if (c == 'c')
-		{
-			count = _putchar(va_arg(args, int));
-		}
+	{
+		count = _putchar(va_arg(args, int));
+	}
 	else if (c == '%')
-		{
-			count = _putchar(c);
-		}
-		else if (c == 's')
-		{
-			char *str = va_arg(args, char *);
+	{
+		count = _putchar(c);
+	}
+	else if (c == 's')
+	{
+		char *str = va_arg(args, char *);
 
-			count += string_case(str);
-		}
+
+		count += string_case(str);
+	}
 	else if (c == '\0')
-		{
-			count += _putchar(c);
-		}
-		else if (c == 'i' || c == 'd')
-		{
-			int num = va_arg(args, int);
+	{
+		count += _putchar(c);
+	}
+	else if (c == 'i' || c == 'd')
+	{
+		int num = va_arg(args, int);
 
-			if (num < 0)
-				count++;
+
+		if (num < 0)
+		{
+			count++;
 			count += number_len(num);
 			number_case(num);
 		}
-	else
-	{
-		count += _putchar('%');
-				count += _putchar(c);
-	}
+		else
+		{
+			count += _putchar('%');
+			count += _putchar(c);
+		}
 	va_end(args);
 	return (count);
 }
