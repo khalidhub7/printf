@@ -73,11 +73,3 @@ int number_case(int numb)
 	}
 	return (count);
 }
-/**
- * number_len - function print lenght of a number.
- *
- * @number: the number to print.
- *
- * Return: lenght of number.
- *
-*/
