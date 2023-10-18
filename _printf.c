@@ -69,14 +69,7 @@ int specifier_case(char c, va_list args)
 	}
 	else if (c == 'i' || c == 'd')
 	{
-		int num = va_arg(args, int);
-
-		if (num < 0)
-		{
-			count++;
-		count += number_len(num);
-		number_case(num);
-		}
+		count = number_case(va_arg(args, int));
 	}
 	else
 	{
