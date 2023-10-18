@@ -79,7 +79,7 @@ int number_case(int numb)
  * @number: the number to print.
  *
  * Return: lenght of number.
- */
+ *
 
 int number_len(int number)
 {
@@ -91,4 +91,4 @@ int number_len(int number)
 	{
 		return (1 + number_len(number / 10));
 	}
-}
+}/
