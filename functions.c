@@ -80,17 +80,4 @@ int number_case(int numb)
  *
  * Return: lenght of number.
  *
-
-**
-* int number_len(int number)
-*{
-*	if (number == 0)
-*	{
-*		return (0);
-*	}
-*	else
-*	{
-*		return (1 + number_len(number / 10));
-*	}
-*}
 */
