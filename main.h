@@ -10,6 +10,5 @@ int _printf(const char *format, ...);
 int specifier_case(char c, va_list args);
 int string_case(char *str);
 int number_case(int numb);
-/*int number_len(int number);*/
 
 #endif
